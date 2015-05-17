@@ -1,8 +1,22 @@
 <%= render 'layouts/header' %>
 
-<p class="notice"><%= notice %></p
-<p class="alert"><%= alert %></p>
+<div class="content-container">
+	<div class="units-container">
+	
+		<p class="notice"><%= notice %></p
+		<p class="alert"><%= alert %></p>
 
-<%= yield %>
+		<div class="units-row">
+			<div class="unit-70">
+				<%= yield %>
+			</div>
+
+			<div class="unit-30 button-container">
+				<a class="btn" href="#">Dodaj sjećanje</a>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <%= render 'layouts/footer' %>

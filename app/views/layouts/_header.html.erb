@@ -24,7 +24,8 @@
 						<ul>
 
 							<% if user_signed_in? %>
-								<li> <%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+								<li> <%= link_to "Uredi profil", edit_user_registration_path %></li>
+								<li> <%= link_to('Odjava', destroy_user_session_path, method: :delete) %></li>
 							<% else %>
 
 								<li><%= link_to "Prijava", new_user_session_path %> </li>
