@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kad sam bio mali | Najsladje memorije djetinjstva</title>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="wrapper">
+	
+	<header>
+		<div class="units-container">
+			<div class="units-row">
+				<div class="unit-50 logo">
+					<h1><%= link_to "Kad sam bio mali", root_path %></h1>
+				</div>
+
+				<div class="unit-50 nav-container">
+					<nav class="navbar navbar-right">
+						
+						<ul>
+
+							<% if user_signed_in? %>
+								<li> <%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+							<% else %>
+
+								<li><%= link_to "Prijava", new_user_session_path %> </li>
+								<li> <%= link_to "Registracija", new_user_registration_path %> </li>
+								
+							<% end %>
+						</ul>
+					</nav>
+				</div><!--units 50-->
+			</div><!--units row-->
+		</div><!--units container-->
+	</header>
