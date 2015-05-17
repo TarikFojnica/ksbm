@@ -1,0 +1,11 @@
+<%= simple_form_for(@status) do |f| %>
+  <%= f.error_notification %>
+
+    
+   <div class="new-status-container">
+	   	<%= f.text_area :content, placeholder: "Upišite sjećanje. Ljudi vole kratko i zanimljivo.", class: "width-100 input-form" %>
+
+	    <%= f.button :submit, class: "btn btn-green" %>
+   </div><!--new status cotanaiern-->
+
+<% end %>

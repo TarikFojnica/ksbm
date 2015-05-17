@@ -1,0 +1,10 @@
+
+<div class="element">
+  <p><%= status.content %></p>
+
+  <ul class="blocks-3">
+    <li><%= link_to 'Show', status %></li>
+    <li><%= link_to 'Edit', edit_status_path(status) %></li>
+    <li><%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  </ul>
+</div>

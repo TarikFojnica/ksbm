@@ -11,8 +11,13 @@
 				<%= yield %>
 			</div>
 
-			<div class="unit-30 button-container">
-				<a class="btn" href="#">Dodaj sjećanje</a>
+			<div class="unit-30 add-button-container">
+
+				<% if user_signed_in? %>
+					<%= link_to 'Dodaj Sjećanje', new_status_path, :class => "btn btn-green" %>
+				<% else %>
+					<%= link_to 'Dodaj Sjećanje', new_user_registration_path, :class => "btn btn-green" %>
+				<% end %>
 			</div>
 		</div>
 	</div>

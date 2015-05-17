@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   
+  resources :statuses
+
   devise_for :users
   #postavlja root
-  root 'pages#home'
+  root 'statuses#index'
   #get  'pages/home'
 
   # The priority is based upon order of creation: first created -> highest priority.
