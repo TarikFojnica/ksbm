@@ -1,4 +1,7 @@
 class StatusesController < ApplicationController
+
+  before_filter :authenticate_user!, except:[:index]
+
   before_action :set_status, only: [:show, :edit, :update, :destroy]
 
   # GET /statuses
@@ -14,17 +17,20 @@ class StatusesController < ApplicationController
 
   # GET /statuses/new
   def new
-    @status = Status.new
+    #@status = Status.new
+    @status = current_user.statuses.new
   end
 
   # GET /statuses/1/edit
   def edit
+    @status = current_user.statuses.find(params[:id])
   end
 
   # POST /statuses
   # POST /statuses.json
   def create
-    @status = Status.new(status_params)
+    #@status = Status.new(status_params)
+    @status = current_user.statuses.new(status_params)
 
     respond_to do |format|
       if @status.save
@@ -54,7 +60,9 @@ class StatusesController < ApplicationController
   # DELETE /statuses/1
   # DELETE /statuses/1.json
   def destroy
+    @status = current_user.statuses.find(params[:id])
     @status.destroy
+
     respond_to do |format|
       format.html { redirect_to statuses_url, notice: 'Status was successfully destroyed.' }
       format.json { head :no_content }
