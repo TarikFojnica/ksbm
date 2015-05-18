@@ -15,6 +15,9 @@
  */
 $blue: #00a8e6;
 $text-color: #4f4203;
+$grey: #d6d6d6;
+
+$menu-hover: #ededc9;
 
 
 /*===================================
@@ -89,7 +92,8 @@ header {
 		h1 {
 			text-transform: uppercase;
 			font-size: 1.5em;
-			margin-top: 1em;
+			margin-top: .5em;
+
 			a {
 				text-decoration: none;
 				color: grey;
@@ -99,26 +103,26 @@ header {
 	nav {
 
 		&.navbar {
-			margin: 1em 0;
+			margin: 0;
 		}
 		ul {
 			li {
 				margin: 0 !important;
 				a {
-					color: #fff;
-					padding: .6em 1em;
-					background-color: grey;
-
+					padding: .8em 1em;
+					border-left: 1px solid $grey;
+					
 					&:hover {
-						background-color: #000;
+						background-color: $menu-hover;
 						text-decoration: none !important;
+						color: $text-color !important
 					}
 				}
 
-				&.register {
-					a {
-						background-color: $blue;
-					}
+				img {
+					width: 1.7em;
+					margin-right: .2em;
+					opacity: .5;
 				}
 			}
 		}
@@ -132,6 +136,12 @@ header {
 		&.btn {
 			display: block;
 			padding: 1em;
+			font-weight: 600;
+		}
+
+		img {
+			width: 1.7em;
+			margin-right: .5em;
 		}
 	}
 }
@@ -171,6 +181,10 @@ header {
 				display: inline-block;
 			}
 		}
+	}
+
+	.pagination {
+
 	}
 }
 

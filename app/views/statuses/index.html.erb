@@ -1,15 +1,18 @@
 <div class="statuses-container">
+
  <% @statuses.each do |status| %>
   <div class="element">
       <p><%= status.content %> </p>
- 
-      <ul class="controll-buttons">
-		<% if current_user == status.user%>
-	        <li><%= link_to 'Uredi', edit_status_path(status) %></li>
-	        <li><%= link_to 'x', status, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+	 
+	 	<% if current_user == status.user%>
+	       <ul class="controll-buttons">
+		        <li><%= link_to 'Uredi', edit_status_path(status) %></li>
+		        <li><%= link_to 'x', status, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+	        </ul>
 	    <% end %>
-      </ul>
     </div>
 
 <% end %>
+
+<%= will_paginate @statuses, :previous_label => '<', :next_label => '>' %>
 </div>

@@ -4,10 +4,13 @@ class StatusesController < ApplicationController
 
   before_action :set_status, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /statuses
   # GET /statuses.json
   def index
-    @statuses = Status.all
+    @statuses = Status.paginate(:page => params[:page], :per_page => 10).order(created_at: :desc)
+
   end
 
   # GET /statuses/1
