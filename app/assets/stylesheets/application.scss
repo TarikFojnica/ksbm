@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+$kiddie-font: 'Nunito', sans-serif;
+
 $blue: #00a8e6;
 $text-color: #4f4203;
 $grey: #d6d6d6;
@@ -87,6 +89,7 @@ Header
 
 header {
 	background: rgba(255,255,255,.9);
+	margin-bottom: 1em;
 
 	.logo {
 		h1 {
@@ -101,6 +104,7 @@ header {
 		}
 	}
 	nav {
+		font-family: $kiddie-font;
 
 		&.navbar {
 			margin: 0;
@@ -111,7 +115,8 @@ header {
 				a {
 					padding: .8em 1em;
 					border-left: 1px solid $grey;
-					
+					color: $text-color;
+
 					&:hover {
 						background-color: $menu-hover;
 						text-decoration: none !important;
@@ -120,7 +125,7 @@ header {
 				}
 
 				img {
-					width: 1.7em;
+					width: 1.3em;
 					margin-right: .2em;
 					opacity: .5;
 				}
@@ -129,10 +134,28 @@ header {
 	}
 }
 
+.notice {
+	h5 {
+		background-color: #FFFFFF;
+		padding: .7em;
+		border: 1px solid #45f75d;
+	}
+}
+
+.alert {
+	h5 {
+		background-color: #FFFFFF;
+		padding: .7em;
+		border: 1px solid #f77171;
+	}
+}
+
+
 
 .add-button-container {
 	text-align: right;
 	a {
+		font-family: $kiddie-font;
 		&.btn {
 			display: block;
 			padding: 1em;
@@ -193,5 +216,26 @@ header {
 	padding: 1em;
 	p {
 		margin: 0;
+	}
+}
+
+.form-container {
+	background-color: rgba(255,255,255,.5);
+	padding: 2em;
+	@include border-radius(3px);
+
+	.form-inner {
+		width: 450px;
+		max-width: 100%;
+		margin: 0 auto;
+		background-color: #fff;
+		padding: 2em;
+
+		input {
+			width: 100%;
+			margin-bottom: 1em;
+			padding: .7em;
+			@include border-radius(3px);
+		}
 	}
 }

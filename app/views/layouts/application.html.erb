@@ -3,8 +3,19 @@
 <div class="content-container">
 	<div class="units-container">
 	
-		<p class="notice"><%= notice %></p
-		<p class="alert"><%= alert %></p>
+		<% if flash[:notice] -%>
+  			<div class = "notice"> <h5> <%= flash[:notice] %> </h5> </div>
+  		<% end %>
+		
+  		<% if flash[:alert] %>
+  			<div class="alert"> <h5> <%= flash[:alert] %> </h5> </div>
+  		<% end %>
+		
+
+
+		
+
+		
 
 		<div class="units-row">
 			<div class="unit-70">
