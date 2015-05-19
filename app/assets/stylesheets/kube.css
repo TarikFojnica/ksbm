@@ -1667,50 +1667,7 @@ input.input-smaller {
   cursor: text;
   color: rgba(0, 0, 0, 0.4);
 }
-/* =Pagination
------------------------------------------------------------------------------*/
-.pagination {
-  position: relative;
-  left: -9px;
-  margin-left: 0;
-  list-style: none;
-}
-.pagination:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.pagination:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.pagination li {
-  float: left;
-  margin-right: 2px;
-}
-.pagination a,
-.pagination span {
-  display: block;
-  padding: 7px 9px;
-  line-height: 1;
-  border-radius: 2px;
-  color: #0f0f0f;
-  text-decoration: none;
-}
-.pagination span,
-.pagination li.active a,
-.pagination li.active a:hover {
-  color: #ffffff;
-  background-color: #0f0f0f;
-  cursor: text;
-}
-.pagination a:focus,
-.pagination a:hover {
-  text-decoration: none;
-  background-color: #0f0f0f;
-  color: #fff;
-}
+
 /* =Buttons
 -----------------------------------------------------------------------------*/
 .btn,

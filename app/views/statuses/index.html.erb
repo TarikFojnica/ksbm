@@ -16,5 +16,10 @@
 
 <% end %>
 
-<%= will_paginate @statuses, :previous_label => '<', :next_label => '>' %>
+
+<div class="apple_pagination">
+
+   <%= will_paginate @statuses, :previous_label => '<<', :next_label => '>>' %>
+
+  </div>
 </div>
