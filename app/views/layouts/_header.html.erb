@@ -28,7 +28,7 @@
 
 							<% if user_signed_in? %>
 								<li> <%= link_to image_tag('edit.svg') + "Uredi profil", edit_user_registration_path %></li>
-								<li> <%= link_to image_tag('http://placehold.it/50x50') + "Odjava", destroy_user_session_path, method: :delete %></li>
+								<li> <%= link_to "Odjava", destroy_user_session_path, method: :delete %></li>
 							<% else %>
 
 								<li><%= link_to image_tag('login.svg') + "Prijava", new_user_session_path %> </li>

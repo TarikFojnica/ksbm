@@ -150,6 +150,15 @@ header {
 	}
 }
 
+.login-links {
+	background-color: $grey;
+	padding: 1em;
+
+	a {
+		display: block;
+	}
+}
+
 
 
 .add-button-container {
@@ -177,6 +186,12 @@ header {
 	.btn {
 		margin-top: 1em !important;
 	}
+
+	textarea {
+		padding: 1em;
+		@include border-radius(3px);
+		border: 1px solid $grey;
+	}
 }
 
 
@@ -195,13 +210,18 @@ header {
 
 		ul {
 			position: absolute;
-			top: 0;
+			top: .5em;
 			right: .5em;
 			list-style-type: none;
 			li {
 				margin: 0;
 				margin-left: 1em;
 				display: inline-block;
+
+				img {
+					width: 1.2em;
+					padding: .2em;
+				}
 			}
 		}
 	}
@@ -210,6 +230,7 @@ header {
 
 	}
 }
+
 
 .single-status {
 	background-color: rgba(255,255,255,.8);
